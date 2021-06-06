@@ -4,7 +4,7 @@ import axios from 'axios';
 import WhaleContext from '../context/WhaleContext';
 
 const SubmitBtn = () => {
-  const [Whales] = useContext(WhaleContext);
+  const [Whales, setWhales] = useContext(WhaleContext);
 
   const handleWhaleWatching = () => {
     axios
@@ -12,7 +12,13 @@ const SubmitBtn = () => {
         `https://whalewatching-xyz.herokuapp.com/${Whales.currency}/${Whales.minTransactionVal}`
       )
       .then((res) => {
-        console.log(res);
+        setWhales((prevData) => {
+          return {
+            ...prevData,
+            transactionCount: res.data.count,
+            transactions: res.data.transactions
+          };
+        });
       })
       .catch((err) => {
         console.log(err);
