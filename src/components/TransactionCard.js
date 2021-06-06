@@ -1,5 +1,4 @@
 import { EuiCard, EuiButton } from '@elastic/eui';
-import { currencies } from '../currencies';
 
 const TransactionCard = (props) => {
   const { transaction } = props;
