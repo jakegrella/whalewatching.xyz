@@ -1,12 +1,14 @@
-import { EuiText } from '@elastic/eui';
+import { EuiFlexItem, EuiText } from '@elastic/eui';
 
 const Header = () => {
   return (
-    <header>
-      <EuiText>
-        <h1>whalewatching.xyz</h1>
-      </EuiText>
-    </header>
+    <EuiFlexItem>
+      <header>
+        <EuiText>
+          <h1>whalewatching.xyz</h1>
+        </EuiText>
+      </header>
+    </EuiFlexItem>
   );
 };
 

@@ -1,5 +1,5 @@
 import { useContext } from 'react';
-import { EuiSuperSelect, EuiIcon } from '@elastic/eui';
+import { EuiFlexItem, EuiSuperSelect, EuiIcon } from '@elastic/eui';
 import { currencies } from '../currencies';
 import WhaleContext from '../context/WhaleContext';
 
@@ -26,12 +26,14 @@ const CurrencySelect = () => {
   };
 
   return (
-    <EuiSuperSelect
-      className=''
-      options={currencyOptions}
-      valueOfSelected={Whales.currency}
-      onChange={(val) => handleCurrencyChange(val)}
-    />
+    <EuiFlexItem grow={3}>
+      <EuiSuperSelect
+        className=''
+        options={currencyOptions}
+        valueOfSelected={Whales.currency}
+        onChange={(val) => handleCurrencyChange(val)}
+      />
+    </EuiFlexItem>
   );
 };
 

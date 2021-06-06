@@ -1,5 +1,5 @@
 import { useContext } from 'react';
-import { EuiButton } from '@elastic/eui';
+import { EuiFlexItem, EuiButton } from '@elastic/eui';
 import axios from 'axios';
 import WhaleContext from '../context/WhaleContext';
 
@@ -25,7 +25,11 @@ const SubmitBtn = () => {
       });
   };
 
-  return <EuiButton onClick={handleWhaleWatching}>go whale watching</EuiButton>;
+  return (
+    <EuiFlexItem grow={1}>
+      <EuiButton onClick={handleWhaleWatching}>go whale watching</EuiButton>
+    </EuiFlexItem>
+  );
 };
 
 export default SubmitBtn;

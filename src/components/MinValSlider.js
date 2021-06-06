@@ -1,5 +1,5 @@
 import { useContext } from 'react';
-import { EuiRange } from '@elastic/eui';
+import { EuiFlexItem, EuiRange } from '@elastic/eui';
 import { htmlIdGenerator } from '@elastic/eui/lib/services';
 import WhaleContext from '../context/WhaleContext';
 
@@ -16,17 +16,19 @@ const MinValSlider = () => {
   };
 
   return (
-    <EuiRange
-      id={htmlIdGenerator()()}
-      step={500000}
-      min={500000}
-      max={50000000}
-      value={Whales.minTransactionVal}
-      onChange={(val) => handleMinTransactionValChange(val)}
-      showLabels
-      showValue
-      showRange
-    />
+    <EuiFlexItem grow={5}>
+      <EuiRange
+        id={htmlIdGenerator()()}
+        step={500000}
+        min={500000}
+        max={50000000}
+        value={Whales.minTransactionVal}
+        onChange={(val) => handleMinTransactionValChange(val)}
+        showLabels
+        showValue
+        showRange
+      />
+    </EuiFlexItem>
   );
 };
 
