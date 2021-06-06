@@ -9,7 +9,7 @@ const SubmitBtn = () => {
   const handleWhaleWatching = () => {
     axios
       .get(
-        `http://127.0.0.1:5001/${Whales.currency}/${Whales.minTransactionVal}`
+        `https://whalewatching-xyz.herokuapp.com/${Whales.currency}/${Whales.minTransactionVal}`
       )
       .then((res) => {
         console.log(res);
