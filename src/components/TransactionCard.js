@@ -3,8 +3,6 @@ import { currencies } from '../currencies';
 
 const TransactionCard = (props) => {
   const { transaction } = props;
-  console.log(props);
-
   return (
     <EuiCard title={`${transaction.hash.substr(0, 20)}...`}>
       <p>
@@ -17,7 +15,7 @@ const TransactionCard = (props) => {
           href={`https://www.blockchain.com/${transaction.symbol}/address/${transaction.from.address}`}
           target='_blank'
           rel='noreferrer'>
-          {transaction.from.address}
+          {transaction.from.address.substr(0, 20)}...
         </a>{' '}
         ({transaction.from.owner_type} wallet)
       </p>
@@ -27,7 +25,7 @@ const TransactionCard = (props) => {
           href={`https://www.blockchain.com/${transaction.symbol}/address/${transaction.to.address}`}
           target='_blank'
           rel='noreferrer'>
-          {transaction.to.address}
+          {transaction.to.address.substr(0, 20)}...
         </a>{' '}
         ({transaction.to.owner_type} wallet)
       </p>
