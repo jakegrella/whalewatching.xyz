@@ -13,6 +13,12 @@ const CurrencySelect = () => {
         <EuiIcon type={currency.iconUrl} />
         <span>{currency.name}</span>
       </>
+    ),
+    dropdownDisplay: (
+      <>
+        <EuiIcon type={currency.iconUrl} />
+        <span>{currency.name}</span>
+      </>
     )
   }));
 
@@ -27,8 +33,8 @@ const CurrencySelect = () => {
 
   return (
     <EuiFlexItem grow={3}>
+      <p>Currency:</p>
       <EuiSuperSelect
-        className=''
         options={currencyOptions}
         valueOfSelected={Whales.currency}
         onChange={(val) => handleCurrencyChange(val)}

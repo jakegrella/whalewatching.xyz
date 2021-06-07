@@ -17,6 +17,7 @@ const MinValSlider = () => {
 
   return (
     <EuiFlexItem grow={5}>
+      <p>Minimum Transaction Value ($USD):</p>
       <EuiRange
         id={htmlIdGenerator()()}
         step={500000}
