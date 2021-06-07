@@ -8,8 +8,7 @@ const TransactionCard = (props) => {
       <EuiFlexGroup alignItems='flexStart' justifyContent='flexStart'>
         <EuiFlexItem grow={2}>
           <p>
-            Amount ({transaction.symbol.toUpperCase()}): {transaction.amount}{' '}
-            {transaction.symbol.toUpperCase()}
+            Amount: {transaction.amount} {transaction.symbol.toUpperCase()}
           </p>
           <p>
             Amount (USD): $
