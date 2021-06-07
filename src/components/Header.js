@@ -19,7 +19,7 @@ const Header = () => {
             <a href='http://whale-alert.io' target='_blank' rel='noreferrer'>
               whale-alert.io
             </a>{' '}
-            API.
+            API and filters include asset type and minimum transaction value.
           </p>
           <p>I call it "whale watching".</p>
         </EuiText>
